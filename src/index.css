@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-brand-bg: #080814;
+  --color-brand-sidebar: #0D1020;
+  --color-brand-card: #13182D;
+  --color-brand-purple: #B14EFF;
+  --color-brand-blue: #5D7CFF;
+  --color-brand-pink: #FF5CC8;
+  --color-brand-text-white: #FFFFFF;
+  --color-brand-text-secondary: #A8B0C7;
+}
+
+/* Custom Base Styles and Scrollbar */
+html {
+  scroll-behavior: smooth;
+  background-color: #080814;
+  color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080814;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #13182D;
+  border-radius: 4px;
+  border: 2px solid #080814;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B14EFF;
+}
+
+/* Neon Glow Effect Utilities */
+.shadow-neon-purple {
+  box-shadow: 0 0 15px rgba(177, 78, 255, 0.15), 0 0 30px rgba(177, 78, 255, 0.05);
+}
+
+.shadow-neon-blue {
+  box-shadow: 0 0 15px rgba(93, 124, 255, 0.15), 0 0 30px rgba(93, 124, 255, 0.05);
+}
+
+.shadow-neon-pink {
+  box-shadow: 0 0 15px rgba(255, 92, 200, 0.15), 0 0 30px rgba(255, 92, 200, 0.05);
+}
+
+/* Glassmorphism Styles */
+.glass-card {
+  background: rgba(19, 24, 45, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-card-hover:hover {
+  border-color: rgba(177, 78, 255, 0.4);
+  box-shadow: 0 0 25px rgba(177, 78, 255, 0.12);
+  transform: translateY(-4px);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.glass-sidebar {
+  background: rgba(13, 16, 32, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Custom Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0.6;
+  }
+  33% {
+    transform: scale(1.1) translate(20px, -30px);
+    opacity: 0.8;
+  }
+  66% {
+    transform: scale(0.9) translate(-20px, 15px);
+    opacity: 0.5;
+  }
+}
+
+@keyframes pulseGlowSecondary {
+  0%, 100% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.15) translate(-15px, 25px);
+    opacity: 0.7;
+  }
+}
+
+.animate-glow-1 {
+  animation: pulseGlow 15s infinite ease-in-out;
+}
+
+.animate-glow-2 {
+  animation: pulseGlowSecondary 18s infinite ease-in-out;
+}
+
+/* Text Clipping for gradients */
+.text-gradient-purple-blue {
+  background: linear-gradient(135deg, #B14EFF 0%, #5D7CFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-pink-purple {
+  background: linear-gradient(135deg, #FF5CC8 0%, #B14EFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
