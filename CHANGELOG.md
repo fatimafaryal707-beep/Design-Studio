@@ -30,6 +30,13 @@ This file documents all the custom development, interactive features, and full-s
 * **Carousel Slider**: Configured high-performance responsive auto-swiping sliders for the **Skills** and **Services** sections on mobile touch viewpoints.
 * **Auto-Play Support**: Integrated custom `controls`, `playsInline`, `muted`, and auto-play attributes on mobile and tablet viewport renderers to bypass strict modern mobile browser media constraints.
 
+### 4. 🌌 Cosmic Particle Background Animation (Framer Motion)
+* **Feature**: Embedded a high-performance interactive particle system behind the Hero showcase.
+* **UX/Interactivity**:
+  * Employs buttery-smooth Framer Motion spring physics mapping (`useMotionValue`, `useSpring`, `useTransform`) to bypass React re-render passes during pointer movement, optimizing performance at 120 FPS.
+  * Multi-layered parallax depth effect: larger, closer stars shift further in response to the cursor, while deeper, smaller stardust drifts slowly in the background.
+  * Slow, cosmic floating coordinates with customized organic float drifts, subtle star sizing, breathing opacity glows, and a color palette aligned with Faryal Fatima's professional theme.
+
 ---
 
 ## 🛠️ Technology Stack Used

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowUpRight, Sparkles, ShoppingBag, Eye, Play, X, Video, Upload, FileVideo, Trash2, CheckCircle2 } from 'lucide-react';
+import ParticleBackground from './ParticleBackground';
 
 const DB_NAME = 'DesignStudioVideoDB';
 const STORE_NAME = 'videos';
@@ -168,6 +169,9 @@ export default function Hero({ onNavigate }: HeroProps) {
         <div className="absolute bottom-[20%] right-[30%] w-[400px] h-[400px] rounded-full bg-brand-blue/15 blur-[130px] animate-glow-2" />
         <div className="absolute top-[40%] left-[10%] w-[250px] h-[250px] rounded-full bg-brand-pink/5 blur-[90px]" />
       </div>
+
+      {/* Subtle Interactive Particle Background */}
+      <ParticleBackground />
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
         
